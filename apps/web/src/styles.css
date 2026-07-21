@@ -1,0 +1,25 @@
+:root { color: #e7edf3; background: #0f1720; font-family: Inter, system-ui, sans-serif; }
+body { margin: 0; }
+button, input { font: inherit; }
+.app-shell { display: grid; grid-template-columns: 280px 1fr 320px; grid-template-rows: auto 1fr; min-height: 100vh; }
+.toolbar { align-items: center; background: #182332; border-bottom: 1px solid #2a3a4f; display: flex; gap: 1rem; grid-column: 1 / 4; padding: 0.75rem 1rem; }
+.toolbar h1 { font-size: 1.1rem; margin: 0; }
+.file-picker { background: #4c8bf5; border-radius: 0.5rem; color: white; cursor: pointer; padding: 0.5rem 0.75rem; }
+.file-picker input { display: none; }
+.metrics { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0; }
+.metrics div, .properties-list div { background: #101923; border-radius: 0.4rem; padding: 0.35rem 0.5rem; }
+dt { color: #9fb3c8; font-size: 0.75rem; }
+dd { margin: 0; }
+.panel { background: #121c28; overflow: auto; padding: 1rem; }
+.panel h2 { font-size: 1rem; margin: 0.5rem 0; }
+.panel input { box-sizing: border-box; margin-bottom: 0.75rem; padding: 0.5rem; width: 100%; }
+.button-row { display: flex; gap: 0.5rem; margin-bottom: 0.75rem; }
+ul { list-style: none; margin: 0; padding: 0; }
+li { margin-bottom: 0.5rem; }
+.layers label { align-items: center; display: grid; gap: 0.5rem; grid-template-columns: auto 1fr; }
+.layers small { color: #9fb3c8; grid-column: 2; }
+.viewer { min-height: 0; }
+canvas { background: #05080d; display: block; height: 100%; touch-action: none; width: 100%; }
+.entity-results button { text-align: left; width: 100%; }
+.properties-list { display: grid; gap: 0.5rem; }
+@media (max-width: 900px) { .app-shell { grid-template-columns: 1fr; grid-template-rows: auto auto 60vh auto; } .toolbar, .layers, .viewer, .properties { grid-column: 1; } }

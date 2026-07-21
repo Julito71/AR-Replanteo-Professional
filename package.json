@@ -1,0 +1,17 @@
+{
+  "name": "ar-replanteo-professional",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "test:e2e": "npm run test:e2e --prefix apps/web"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0"
+  }
+}
