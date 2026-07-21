@@ -1,0 +1,37 @@
+{
+  "name": "@ar-replanteo/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:deps && tsc -p tsconfig.json && vite build",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "build:deps": "npm run build --prefix ../../packages/geometry-engine && npm run build --prefix ../../packages/cad-engine && npm run build --prefix ../../packages/importer && npm run build --prefix ../../packages/renderer"
+  },
+  "dependencies": {
+    "@ar-replanteo/cad-engine": "file:../../packages/cad-engine",
+    "@ar-replanteo/geometry-engine": "file:../../packages/geometry-engine",
+    "@ar-replanteo/importer": "file:../../packages/importer",
+    "@ar-replanteo/renderer": "file:../../packages/renderer",
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.167.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/three": "^0.167.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "jsdom": "^24.1.1",
+    "typescript": "^5.5.0",
+    "vite": "^5.3.0",
+    "vitest": "^2.0.5"
+  }
+}
